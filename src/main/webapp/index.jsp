@@ -1,15 +1,12 @@
-<?php
-// IE header to allow third party cookies.
-header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"');
-
-// Force browser to keep page updated.
-header('Expires: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
-header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
-header('Cache-Control: no-cache, must-revalidate');
-header('Pragma: no-cache');
-
-error_reporting(E_ALL);
-?>
+<%
+    // IE header to allow third party cookies.
+    response.setHeader("P3P:CP", "IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT");
+    
+    // Don't allow caching.
+    response.setHeader("Expires", "0");
+    response.setHeader("Cache-Control", "no-cache, must-revalidate");
+    response.setHeader("Pragma", "no-cache");
+%>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
