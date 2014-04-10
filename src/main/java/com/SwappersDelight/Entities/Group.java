@@ -10,6 +10,31 @@ package com.SwappersDelight.Entities;
  *
  * @author rogan2929
  */
-public class Group {
-    
+public class Group extends GraphObject {
+    private String name;
+    private ImageInfo icon;
+
+    public Group() {
+    }
+
+    public Group(String name, ImageInfo icon) {
+        this.name = name;
+        this.icon = icon;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ImageInfo getIcon() {
+        return icon;
+    }
+
+    public void setIcon(ImageInfo icon) {
+        this.icon = icon;
+    }
 }
