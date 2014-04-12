@@ -6,8 +6,8 @@
 
 package com.SwappersDelight.Entities;
 
+import com.google.gson.Gson;
 import java.util.Objects;
-import com.google.code.gson;
 
 /**
  * Base class for all Facebook Graph API objects.
@@ -51,7 +51,6 @@ public abstract class GraphObject {
      * @return 
      */
     public String toJSONString() {
-        //return "";
-        Gson gson = new Gson();
+        return (new Gson()).toJson(this);
     }
 }
