@@ -12,12 +12,12 @@ package com.SwappersDelight.Entities;
  */
 public class Group extends GraphObject {
     private String name;
-    private ImageInfo icon;
+    private ImageObject icon;
 
     public Group() {
     }
 
-    public Group(String name, ImageInfo icon) {
+    public Group(String name, ImageObject icon) {
         this.name = name;
         this.icon = icon;
     }
@@ -30,11 +30,11 @@ public class Group extends GraphObject {
         this.name = name;
     }
 
-    public ImageInfo getIcon() {
+    public ImageObject getIcon() {
         return icon;
     }
 
-    public void setIcon(ImageInfo icon) {
+    public void setIcon(ImageObject icon) {
         this.icon = icon;
     }
 }

@@ -3,22 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.SwappersDelight.Entities;
 
+import java.util.ArrayList;
+
 /**
- *
+ * Base Post Graph Object
+ * 
  * @author rogan2929
  */
 public class Post extends GraphObject {
+
     protected String message;
     protected User actor;
     protected int commentCount;
     protected int likeCount;
     protected boolean userLikes;
-    
+    protected ArrayList<ImageObject> imageData;
+    protected LinkData linkData;
+    protected PostType type;
+
     public Post() {
+    }
+
+    public Post(String id) {
+        super(id);
         
+        this.imageData = new ArrayList<>();
     }
 
     public Post(String message, User actor, int commentCount, int likeCount, boolean userLikes) {
@@ -27,6 +38,8 @@ public class Post extends GraphObject {
         this.commentCount = commentCount;
         this.likeCount = likeCount;
         this.userLikes = userLikes;
+        
+        this.imageData = new ArrayList<>();
     }
 
     public String getMessage() {

@@ -14,12 +14,12 @@ public class User extends GraphObject {
     private String lastName;
     private String firstName;
     private String profileUrl;
-    private ImageInfo image;
+    private ImageObject image;
 
     public User() {
     }
 
-    public User(String id, String lastName, String firstName, String profileUrl, ImageInfo image) {
+    public User(String id, String lastName, String firstName, String profileUrl, ImageObject image) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -51,11 +51,11 @@ public class User extends GraphObject {
         this.profileUrl = profileUrl;
     }
 
-    public ImageInfo getImage() {
+    public ImageObject getImage() {
         return image;
     }
 
-    public void setImage(ImageInfo image) {
+    public void setImage(ImageObject image) {
         this.image = image;
     }
 }
